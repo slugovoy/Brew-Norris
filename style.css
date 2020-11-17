@@ -1,0 +1,12 @@
+.results-container {
+    display: block;
+    justify-content: center;
+    background-color: darkblue;
+
+}
+.resultsDiv {
+    margin-bottom: 40px;
+    color: black;
+    background-color: cornsilk;
+    text-align: center;
+}

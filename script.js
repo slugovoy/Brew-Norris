@@ -33,7 +33,7 @@ $(document).ready(function () {
             .text("Brewery Website: " + data[i].website_url);
 
 
-          $(".results-container").append(breweryName, breweryStreet, breweryPhone, breweryWebsite);
+          $(".results-container").append($("<div>").attr("class", "resultsDiv").append(breweryName, breweryStreet, breweryPhone, breweryWebsite));
         }
       });
     }
