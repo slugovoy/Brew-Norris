@@ -20,8 +20,20 @@ $(document).ready(function () {
             .attr("class", "breweryData")
             .text("Brewery: " + data[i].name);
           console.log(data[i].name);
-          
-          $(".results-container").append(breweryName);
+          let breweryStreet = $("<p>")
+            .attr("class", "breweryData")
+            .text("Brewery Address: " + data[i].street);
+
+            let breweryPhone = $("<p>")
+            .attr("class", "breweryData")
+            .text("Brewery Phone: " + data[i].phone);
+
+            let breweryWebsite = $("<p>")
+            .attr("class", "breweryData")
+            .text("Brewery Website: " + data[i].website_url);
+
+
+          $(".results-container").append(breweryName, breweryStreet, breweryPhone, breweryWebsite);
         }
       });
     }
