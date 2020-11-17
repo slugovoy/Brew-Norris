@@ -1,61 +1,59 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link
-      type="text/css"
-      rel="stylesheet"
-      href="./materialize/css/materialize.min.css"
-      media="screen,projection"
-    />
-    <link
-      href="https://fonts.googleapis.com/icon?family=Material+Icons"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="style.css">
-    <title>Brew Norris</title>
-  </head>
-  <div class="figure">
-    <img
-      src="chuckapproves.jpg"
-      alt="thumbs up chuck;"
-      width="400"
-      height="341"
-    />
-  </div>
-  <body>
-    <div class="box">
-      <header class="header">
-        <h1>Brew Norris</h1>
-      </header>
-      <form class="search-container container">
-        <h2>Search for a brewery by city.</h2>
-        <hr />
-        <div class="search-wrapper wrapper">
-          <p>Search City:</p>
-          <input type="text" name="search" id="search" />
-        </div>
 
-        <div class="btn-wrapper">
-          <button id="search-btn">Search</button>
-          <button id="clear-btn">Clear</button>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link type="text/css" rel="stylesheet" href="./materialize/css/materialize.min.css" media="screen,projection" />
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css">
+  <title>Brew Norris</title>
+</head>
+<div class="figure">
+  <img src="chuckapproves.jpg" alt="thumbs up chuck;" width="400" height="341" />
+</div>
+
+<body>
+  <div class="box">
+    <header class="header">
+      <h1>Brew Norris</h1>
+    </header>
+    <div class="joke-container">
+      <!-- <div class="row">
+        <div class="col s12 m6"> -->
+      <div class="card blue-grey darken-1">
+        <div class="card-content white-text">
         </div>
-      </form>
-      <div class="brewery-container">
-        <h2>List of Breweries</h2>
-        <hr />
-        <div class="results-container"></div>
       </div>
-      <footer class="footer">
-        <p>Made by Alan, Nick,Sergey, and Danielle</p>
-      </footer>
     </div>
-    <script
-      src="https://code.jquery.com/jquery-3.5.1.js"
-      integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
-      crossorigin="anonymous"
-    ></script>
-    <script src="script.js"></script>
-  </body>
+  </div>
+  </div>
+  </div>
+  <form class="search-container container">
+    <h2>Search for a brewery by city.</h2>
+    <hr />
+    <div class="search-wrapper wrapper">
+      <p>Search City:</p>
+      <input type="text" name="search" id="search" />
+    </div>
+
+    <div class="btn-wrapper">
+      <button id="search-btn">Search</button>
+      <button id="clear-btn">Clear</button>
+    </div>
+  </form>
+  <div class="brewery-container">
+    <h2>List of Breweries</h2>
+    <hr />
+    <div class="results-container"></div>
+  </div>
+  <footer class="footer">
+    <p>Made by Alan, Erik, Sergey, and Danielle</p>
+  </footer>
+  </div>
+  <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
+    crossorigin="anonymous"></script>
+  <script src="script.js"></script>
+</body>
+
 </html>
