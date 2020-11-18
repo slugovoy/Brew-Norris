@@ -19,8 +19,8 @@ $(document).ready(function () {
             .attr("class", "breweryDataName")
             .attr("id", "breweryName")
             .text("Brewery: " + data[i].name);
-            breweryHistory.push(breweryName.text());
-            window.localStorage.setItem("breweryHistory", JSON.stringify(breweryHistory));
+          breweryHistory.push(breweryName.text());
+          window.localStorage.setItem("breweryHistory", JSON.stringify(breweryHistory));
           console.log(data[i].name);
           let breweryStreet = $("<p>")
             .attr("class", "breweryData")
@@ -31,7 +31,7 @@ $(document).ready(function () {
             .text("Brewery Phone: " + data[i].phone);
 
           let breweryWebsite = $("<p>").text("Brewery website: ").append($("<a>")
-            .attr("class", "breweryData").attr("href", "data[i].website_url")
+            .attr("class", "breweryData").attr("href", data[i].website_url).attr("target", "_blank")
             .text(data[i].website_url));
 
           $(".results-container").append(
@@ -40,9 +40,9 @@ $(document).ready(function () {
               .append(breweryName, breweryStreet, breweryPhone, breweryWebsite)
           );
         }
-        
+
       });
-      
+
     }
 
     function saveBrewery(e) {
