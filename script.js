@@ -5,7 +5,8 @@ $(document).ready(function () {
     var cityName = $("#search").val().trim();
     buildQueryURL();
     $(".card-content").empty();
-
+    $(".results-container").empty();
+    // $(".favorites-container").empty();
     function buildQueryURL() {
       var queryURL =
         "https://api.openbrewerydb.org/breweries?by_city=" + cityName;
