@@ -3,7 +3,6 @@ $(document).ready(function () {
   searchButton.on("click", function (e) {
     e.preventDefault();
     var cityName = $("#search").val().trim();
-    console.log(cityName);
     buildQueryURL();
     $(".card-content").empty();
 
@@ -28,9 +27,9 @@ $(document).ready(function () {
             .attr("class", "breweryData")
             .text("Brewery Phone: " + data[i].phone);
 
-          let breweryWebsite = $("<p>")
-            .attr("class", "breweryData")
-            .text("Brewery Website: " + data[i].website_url);
+          let breweryWebsite = $("<p>").text("Brewery website: ").append($("<a>")
+            .attr("class", "breweryData").attr("href", "data[i].website_url")
+            .text(data[i].website_url));
 
           $(".results-container").append(
             $("<div>")
