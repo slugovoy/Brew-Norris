@@ -1,16 +1,24 @@
-.results-container {
+.results-container, .favorites-container {
     display: block;
     justify-content: center;
-    background-color: darkblue;
+    background-color: rgb(24, 202, 202);
 
 }
 .resultsDiv {
     margin-bottom: 40px;
     color: black;
-    background-color: cornsilk;
+    background-color: rgb(160, 166, 172);
     text-align: center;
 }
 
 .header, .figure, .brewery-container, .joke-container {
+    text-align: center;
+}
+
+.card-content {
+    background-color: slategray ;
+}
+
+.footer{
     text-align: center;
 }
