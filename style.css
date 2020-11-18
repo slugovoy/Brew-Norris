@@ -2,6 +2,7 @@
     display: block;
     justify-content: center;
     background-color: rgb(24, 202, 202);
+    border: 2px solid black;
 
 }
 .resultsDiv {
@@ -14,6 +15,9 @@
 .header, .figure, .brewery-container, .joke-container {
     text-align: center;
 }
+.brewery-container{
+    background-color: rgb(24, 202, 202);
+}
 
 .card-content {
     background-color: slategray ;
@@ -21,4 +25,7 @@
 
 .footer{
     text-align: center;
+}
+.btn-wrapper {
+    margin-bottom: 2rem;
 }
