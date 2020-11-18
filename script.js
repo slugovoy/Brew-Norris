@@ -18,6 +18,8 @@ $(document).ready(function () {
           let breweryName = $("<p>")
             .attr("class", "breweryData")
             .text("Brewery: " + data[i].name);
+            breweryHistory.push(breweryName.text());
+            window.localStorage.setItem("breweryHistory", JSON.stringify(breweryHistory));
           console.log(data[i].name);
           let breweryStreet = $("<p>")
             .attr("class", "breweryData")
@@ -37,7 +39,9 @@ $(document).ready(function () {
               .append(breweryName, breweryStreet, breweryPhone, breweryWebsite)
           );
         }
+        
       });
+      
     }
 
     const settings = {
@@ -58,4 +62,6 @@ $(document).ready(function () {
       $(".card-content").append(joke);
     });
   });
+  let breweryHistory = JSON.parse(window.localStorage.getItem("breweryHistory")) || [];
+
 });
