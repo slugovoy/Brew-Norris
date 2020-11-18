@@ -16,7 +16,8 @@ $(document).ready(function () {
       }).then(function (data) {
         for (let i = 0; i < data.length; i++) {
           let breweryName = $("<p>")
-            .attr("class", "breweryData")
+            .attr("class", "breweryDataName")
+            .attr("id", "breweryName")
             .text("Brewery: " + data[i].name);
             breweryHistory.push(breweryName.text());
             window.localStorage.setItem("breweryHistory", JSON.stringify(breweryHistory));
@@ -43,6 +44,14 @@ $(document).ready(function () {
       });
       
     }
+
+    function saveBrewery(e) {
+      let savedBrew = e.target;
+      if (e.target.matches(".breweryDataName")) {
+        $(".favorites-container").append($("<p>").attr("class", "brewFave").text($(savedBrew).text()));
+      }
+    }
+    $(document).on('click', saveBrewery);
 
     const settings = {
       async: true,
