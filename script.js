@@ -3,7 +3,7 @@ $(document).ready(function () {
   searchButton.on("click", function (e) {
     e.preventDefault();
     var cityName = $("#search").val().trim();
-        buildQueryURL();
+    buildQueryURL();
     $(".card-content").empty();
     $(".results-container").empty();
     $(".results-container-header").text("");
@@ -23,13 +23,12 @@ $(document).ready(function () {
         url: queryURL,
         method: "GET",
       }).then(function (data) {
-    
         for (let i = 0; i < data.length; i++) {
           let breweryName = $("<p>")
             .attr("class", "breweryDataName")
             .attr("id", "breweryName")
             .text("Brewery: " + data[i].name + "," + data[i].city);
-        
+
           let breweryStreet = $("<p>")
             .attr("class", "breweryData")
             .text("Brewery Address: " + data[i].street);
@@ -70,7 +69,6 @@ $(document).ready(function () {
       },
     };
     $.ajax(settings).done(function (response) {
-
       let joke = $("<p>").text(response.value);
       $(".card-content").append(joke);
     });
@@ -93,25 +91,28 @@ $(document).ready(function () {
 
   let breweryHistory =
     JSON.parse(window.localStorage.getItem("breweryHistory")) || [];
-    if (breweryHistory.length > 0) {
-        for (let i = 0; i < breweryHistory.length; i++) {
-            $(".favorites-container").append(
-                $("<p>").attr("class", "brewFave").text(breweryHistory[i]));   
-      
-            };
-        }
+  if (breweryHistory.length > 0) {
+    for (let i = 0; i < breweryHistory.length; i++) {
+      $(".favorites-container").append(
+        $("<p>").attr("class", "brewFave").text(breweryHistory[i])
+      );
+    }
+  }
 
-        let sendList = $("#sendEmail")
-          sendList.on("click", function(e){
-              e.preventDefault();
-              let text = breweryHistory;
-              let textToRead = "";
-              for (let i = 0; i < text.length; i++) {
-                textToRead = textToRead + "     " + [i] + ". " + text[i];
-                   
-              }
-              console.log(textToRead);
-              let link = "mailto:?subject&body=" + textToRead;
-              window.location.href = link;
-          })
-    });
+  let sendList = $("#sendEmail");
+  sendList.on("click", function (e) {
+    e.preventDefault();
+    let text = breweryHistory;
+    let textToRead = "";
+    for (let i = 0; i < text.length; i++) {
+      textToRead = textToRead + "     " + [i] + ". " + text[i];
+    }
+    console.log(textToRead);
+    let link = "mailto:?subject&body=" + textToRead;
+    window.location.href = link;
+  });
+     
+});
+$(document).ready(function(){
+    $('.modal').modal();
+  })
