@@ -12,6 +12,10 @@
 .menu {
   position: relative;
 }
+.tap-target {
+  width: 150%;
+  height: 150%;
+}
 /* put space between buttons and results container */
 .btn-wrapper {
   margin-bottom: 2rem;
