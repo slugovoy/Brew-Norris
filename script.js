@@ -123,4 +123,10 @@ $(document).ready(function () {
               let link = "mailto:?subject&body=" + textToRead;
               window.location.href = link;
           })
+    
+          document.addEventListener('DOMContentLoaded', function() {
+            var elems = document.querySelectorAll('.tap-target');
+            var instances = M.TapTarget.init(elems, options);
+          });
+         
     });
