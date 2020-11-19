@@ -23,7 +23,7 @@ $(document).ready(function () {
         url: queryURL,
         method: "GET",
       }).then(function (data) {
-          console.log(data);
+    
         for (let i = 0; i < data.length; i++) {
           let breweryName = $("<p>")
             .attr("class", "breweryDataName")
@@ -70,7 +70,7 @@ $(document).ready(function () {
       },
     };
     $.ajax(settings).done(function (response) {
-      console.log(response);
+
       let joke = $("<p>").text(response.value);
       $(".card-content").append(joke);
     });
@@ -101,8 +101,17 @@ $(document).ready(function () {
             };
         }
 
-  $("sendEmail").on("click", function(e){
-      e.preventDefault();
-      
-  })
-});
+        let sendList = $("#sendEmail")
+          sendList.on("click", function(e){
+              e.preventDefault();
+              let text = breweryHistory;
+              let textToRead = "";
+              for (let i = 0; i < text.length; i++) {
+                textToRead = textToRead + "     " + [i] + ". " + text[i];
+                   
+              }
+              console.log(textToRead);
+              let link = "mailto:?subject&body=" + textToRead;
+              window.location.href = link;
+          })
+    });
