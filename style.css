@@ -5,6 +5,13 @@
     border: 2px solid black;
 
 }
+button{
+    background-color: rgb(187, 187, 236);
+    color: white;
+    border-radius: 4px;
+    padding: 0.5rem;
+    cursor: pointer;
+}
 .resultsDiv {
     margin-bottom: 40px;
     color: black;
@@ -28,4 +35,18 @@
 }
 .btn-wrapper {
     margin-bottom: 2rem;
+}
+.brewFave {
+    padding: 1.2rem;
+    margin-bottom: 1rem;
+    background-color: white;
+}
+.h2ForHeader {
+    text-decoration: underline;
+}
+.breweryDataName {
+    cursor: pointer;
+}
+.results-container-header, .favorites-container-header{
+    text-align: center;
 }
