@@ -7,9 +7,9 @@ $(document).ready(function () {
     if (cityName === "") {
       return;
     }
-      //calling first ajax
-        buildQueryURL();
-        //clearing out all containers
+    //calling first ajax
+    buildQueryURL();
+    //clearing out all containers
     $(".card-content").empty();
     $(".results-container").empty();
     $(".results-container-header").text("");
@@ -31,7 +31,7 @@ $(document).ready(function () {
         url: queryURL,
         method: "GET",
       }).then(function (data) {
-      // for loop to iterate through the data
+        // for loop to iterate through the data
         for (let i = 0; i < data.length; i++) {
           //p tag for brewery name
           let breweryName = $("<p>")
@@ -56,7 +56,7 @@ $(document).ready(function () {
                 .attr("target", "_blank")
                 .text(data[i].website_url)
             );
-              //appending all new p tags to results container
+          //appending all new p tags to results container
           $(".results-container").append(
             $("<div>")
               .attr("class", "resultsDiv")
@@ -91,7 +91,7 @@ $(document).ready(function () {
       $(".favorites-container").append(
         $("<p>").attr("class", "brewFave").text($(savedBrew).text())
       );
-        //saving favorites list to local storage
+      //saving favorites list to local storage
       breweryHistory.push($(savedBrew).text());
       window.localStorage.setItem(
         "breweryHistory",
@@ -103,30 +103,28 @@ $(document).ready(function () {
   //pulling local storage items for favorites brewery
   let breweryHistory =
     JSON.parse(window.localStorage.getItem("breweryHistory")) || [];
-    if (breweryHistory.length > 0) {
-        for (let i = 0; i < breweryHistory.length; i++) {
-            $(".favorites-container").append(
-                $("<p>").attr("class", "brewFave").text(breweryHistory[i]));
+  if (breweryHistory.length > 0) {
+    for (let i = 0; i < breweryHistory.length; i++) {
+      $(".favorites-container").append(
+        $("<p>").attr("class", "brewFave").text(breweryHistory[i]));
 
-            };
-        }
-        //ability for user to send a list of favorite breweries via email
-        let sendList = $("#sendEmail")
-          sendList.on("click", function(e){
-              e.preventDefault();
-              let text = breweryHistory;
-              let textToRead = "";
-              for (let i = 0; i < text.length; i++) {
-                textToRead = textToRead + "     " + [i] + ". " + text[i];
+    };
+  }
+  //ability for user to send a list of favorite breweries via email
+  let sendList = $("#sendEmail")
+  sendList.on("click", function (e) {
+    e.preventDefault();
+    let text = breweryHistory;
+    let textToRead = "";
+    for (let i = 0; i < text.length; i++) {
+      textToRead = textToRead + "     " + [i] + ". " + text[i];
 
-              }
-              let link = "mailto:?subject&body=" + textToRead;
-              window.location.href = link;
-          })
-    
-          document.addEventListener('DOMContentLoaded', function() {
-            var elems = document.querySelectorAll('.tap-target');
-            var instances = M.TapTarget.init(elems, options);
-          });
-         
-    });
+    }
+    let link = "mailto:?subject&body=" + textToRead;
+    window.location.href = link;
+  });
+
+});
+$(document).ready(function(){
+  $('.tap-target').tapTarget();
+});

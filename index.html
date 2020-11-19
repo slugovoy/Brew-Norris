@@ -1,12 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
 <!-- meta data and links  -->
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="rating" content="adult">
-  <link type="text/css" rel="stylesheet" href="./materialize/css/materialize.min.css" media="screen,projection" />
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+  <link type="text/css" rel="stylesheet" href="./materialize/css/materialize.min.css" media="screen,projection" />
+  <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
   <link rel="stylesheet" href="style.css">
   <title>Brew Norris</title>
 </head>
@@ -16,15 +20,36 @@
   <div class="figure">
     <img src="chuckapproves.jpg" alt="thumbs up chuck;" width="400" height="341" />
   </div>
- <!-- Element Showed -->
- <a class="waves-effect waves-light btn" onclick="$('.tap-target').tapTarget('open')">User Guide</a>
- <!-- Tap Target Structure -->
- <div class="tap-target" data-target="menu">
-   <div class="tap-target-content">
-     <h5>User Guide</h5>
-     <p>A bunch of text</p>
-   </div>
- </div>
+  <!-- Element Showed -->
+  <!-- <a class="waves-effect waves-light btn" onclick="$('.tap-target').tapTarget('open')">User Guide</a> -->
+  <a class="waves-effect waves-light btn" onclick="$('.tap-target').tapTarget('open')">Open tap target</a>
+  <!-- Tap Target Structure -->
+  <!-- <div class="tap-target" data-target="menu">
+    <div class="tap-target-content">
+      <h5>User Guide</h5>
+      <p>A bunch of text</p>
+    </div>
+  </div> -->
+  <div class="fixed-action-btn direction-top active" style="bottom: 45px; right: 24px;">
+    <a id="menu" class="btn btn-floating btn-large cyan">
+      <i class="material-icons">menu</i>
+    </a>
+  </div>
+  <div class="tap-target-wrapper" style="right: -331px; bottom: -327px; position: fixed;">
+    <div class="tap-target cyan" data-target="menu">
+      <div class="tap-target-content white-text"
+        style="width: 456px; height: 400px; top: 0px; right: 0px; bottom: 0px; left: 0px; padding: 56px; vertical-align: bottom;">
+        <h5>I am here</h5>
+        <p class="white-text">Provide value and encourage return visits by introducing users to new features and
+          functionality at contextually
+          relevant moments.</p>
+      </div>
+    </div>
+    <div class="tap-target-wave" style="top: 344px; left: 344px; width: 112px; height: 112px;"><a
+        class="btn btn-floating btn-large cyan tap-target-origin">
+        <i class="material-icons">menu</i>
+      </a></div>
+  </div>
   <!-- header created -->
   <div class="box">
     <header class="header">
@@ -48,7 +73,7 @@
       <p>Search City:</p>
       <input type="text" name="search" id="search" />
     </div>
-<!-- search button -->
+    <!-- search button -->
     <div class="btn-wrapper">
       <button id="search-btn">Search</button>
       <button id="clear-btn">Clear</button>
@@ -75,9 +100,11 @@
   </footer>
   </div>
   <!-- connect JS and JQ -->
-  <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
+  <!-- <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
     crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script> -->
   <script src="script.js"></script>
+
 </body>
 
 </html>
