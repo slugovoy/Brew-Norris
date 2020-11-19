@@ -101,5 +101,8 @@ $(document).ready(function () {
             };
         }
 
-  
+  $("sendEmail").on("click", function(e){
+      e.preventDefault();
+      
+  })
 });
