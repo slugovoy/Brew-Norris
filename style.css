@@ -1,10 +1,16 @@
-.results-container, .favorites-container {
-    display: block;
-    justify-content: center;
-    background-color: rgb(24, 202, 202);
-    border: 2px solid black;
-
+/* Centered the header, image, and container for the brewery and joke */
+.header, .figure, .brewery-container, .joke-container {
+    text-align: center;
 }
+/* changed the color of the joke container */
+.card-content {
+    background-color: slategray ;
+}
+/* put space between buttons and results container */
+.btn-wrapper {
+    margin-bottom: 2rem;
+}
+/* Styling for buttons */
 button{
     background-color: rgb(187, 187, 236);
     color: white;
@@ -12,41 +18,43 @@ button{
     padding: 0.5rem;
     cursor: pointer;
 }
+/* changed the background color of the list of breweries */
+.brewery-container{
+    background-color: rgb(24, 202, 202);
+}
+/* Centered and colored the list of breweries and the list of favorites */
+.results-container, .favorites-container {
+    display: block;
+    justify-content: center;
+    background-color: rgb(24, 202, 202);
+    border: 2px solid black;
+}
+/* added borders */
 .resultsDiv {
     margin-bottom: 40px;
     color: black;
     background-color: rgb(160, 166, 172);
     text-align: center;
 }
-
-.header, .figure, .brewery-container, .joke-container {
+/* Centered the headers for both the results and favorites */
+ .results-container-header, .favorites-container-header{
     text-align: center;
 }
-.brewery-container{
-    background-color: rgb(24, 202, 202);
-}
-
-.card-content {
-    background-color: slategray ;
-}
-
-.footer{
-    text-align: center;
-}
-.btn-wrapper {
-    margin-bottom: 2rem;
-}
+/* spacing for results added to favorites list */
 .brewFave {
     padding: 1.2rem;
     margin-bottom: 1rem;
     background-color: white;
 }
+/* added text decoration for headers */
 .h2ForHeader {
     text-decoration: underline;
 }
+/* changed the mouse action when hovering over brewery name */
 .breweryDataName {
     cursor: pointer;
 }
-.results-container-header, .favorites-container-header{
+/* centered the footer */
+.footer{
     text-align: center;
 }

@@ -4,16 +4,12 @@ $(document).ready(function () {
   searchButton.on("click", function (e) {
     e.preventDefault();
     var cityName = $("#search").val().trim();
-<<<<<<< HEAD
-    buildQueryURL();
-=======
     if (cityName === "") {
       return;
     }
       //calling first ajax
         buildQueryURL();
         //clearing out all containers
->>>>>>> 17c4a84eb521a9199bc655327af07a0b3499dda7
     $(".card-content").empty();
     $(".results-container").empty();
     $(".results-container-header").text("");
@@ -35,22 +31,14 @@ $(document).ready(function () {
         url: queryURL,
         method: "GET",
       }).then(function (data) {
-<<<<<<< HEAD
-
-=======
       // for loop to iterate through the data
->>>>>>> 17c4a84eb521a9199bc655327af07a0b3499dda7
         for (let i = 0; i < data.length; i++) {
           //p tag for brewery name
           let breweryName = $("<p>")
             .attr("class", "breweryDataName")
             .attr("id", "breweryName")
             .text("Brewery: " + data[i].name + "," + data[i].city);
-<<<<<<< HEAD
-
-=======
           //p tag for brewery address
->>>>>>> 17c4a84eb521a9199bc655327af07a0b3499dda7
           let breweryStreet = $("<p>")
             .attr("class", "breweryData")
             .text("Brewery Address: " + data[i].street);
@@ -115,35 +103,11 @@ $(document).ready(function () {
   //pulling local storage items for favorites brewery
   let breweryHistory =
     JSON.parse(window.localStorage.getItem("breweryHistory")) || [];
-<<<<<<< HEAD
-  if (breweryHistory.length > 0) {
-    for (let i = 0; i < breweryHistory.length; i++) {
-      $(".favorites-container").append(
-        $("<p>").attr("class", "brewFave").text(breweryHistory[i]));
-
-    };
-  }
-
-  let sendList = $("#sendEmail")
-  sendList.on("click", function (e) {
-    e.preventDefault();
-    let text = breweryHistory;
-    let textToRead = "";
-    for (let i = 0; i < text.length; i++) {
-      textToRead = textToRead + "     " + [i] + ". " + text[i];
-
-    }
-    console.log(textToRead);
-    let link = "mailto:?subject&body=" + textToRead;
-    window.location.href = link;
-  })
-});
-=======
     if (breweryHistory.length > 0) {
         for (let i = 0; i < breweryHistory.length; i++) {
             $(".favorites-container").append(
-                $("<p>").attr("class", "brewFave").text(breweryHistory[i]));   
-      
+                $("<p>").attr("class", "brewFave").text(breweryHistory[i]));
+
             };
         }
         //ability for user to send a list of favorite breweries via email
@@ -154,10 +118,9 @@ $(document).ready(function () {
               let textToRead = "";
               for (let i = 0; i < text.length; i++) {
                 textToRead = textToRead + "     " + [i] + ". " + text[i];
-                   
+
               }
               let link = "mailto:?subject&body=" + textToRead;
               window.location.href = link;
           })
     });
->>>>>>> 17c4a84eb521a9199bc655327af07a0b3499dda7
