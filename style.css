@@ -5,6 +5,13 @@
     border: 2px solid black;
 
 }
+button{
+    background-color: rgb(187, 187, 236);
+    color: white;
+    border-radius: 4px;
+    padding: 0.5rem;
+    cursor: pointer;
+}
 .resultsDiv {
     margin-bottom: 40px;
     color: black;
