@@ -12,9 +12,11 @@
 .menu {
   position: relative;
 }
-.tap-target {
-  width: 150%;
-  height: 150%;
+.buble {
+    position: relative;
+    top: 50px;
+    left: 50px;
+
 }
 /* put space between buttons and results container */
 .btn-wrapper {
@@ -70,3 +72,10 @@ button {
 .footer {
   text-align: center;
 }
+@media screen and (max-width: 600px) {
+    .buble {
+        top: -3px;
+        left: 50px;
+        line-height: 1rem;
+    }
+  }
