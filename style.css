@@ -29,3 +29,17 @@
 .btn-wrapper {
     margin-bottom: 2rem;
 }
+.brewFave {
+    padding: 1.2rem;
+    margin-bottom: 1rem;
+    background-color: white;
+}
+.h2ForHeader {
+    text-decoration: underline;
+}
+.breweryDataName {
+    cursor: pointer;
+}
+.results-container-header, .favorites-container-header{
+    text-align: center;
+}
