@@ -106,8 +106,8 @@ $(document).ready(function () {
     if (breweryHistory.length > 0) {
         for (let i = 0; i < breweryHistory.length; i++) {
             $(".favorites-container").append(
-                $("<p>").attr("class", "brewFave").text(breweryHistory[i]));   
-      
+                $("<p>").attr("class", "brewFave").text(breweryHistory[i]));
+
             };
         }
         //ability for user to send a list of favorite breweries via email
@@ -118,7 +118,7 @@ $(document).ready(function () {
               let textToRead = "";
               for (let i = 0; i < text.length; i++) {
                 textToRead = textToRead + "     " + [i] + ". " + text[i];
-                   
+
               }
               let link = "mailto:?subject&body=" + textToRead;
               window.location.href = link;
