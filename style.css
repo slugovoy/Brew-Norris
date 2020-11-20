@@ -12,6 +12,7 @@
 .menu {
   position: relative;
 }
+/* Style for window */
 .buble {
     position: relative;
     top: 50px;
@@ -72,6 +73,7 @@ button {
 .footer {
   text-align: center;
 }
+/* added a media query for the bubble */
 @media screen and (max-width: 600px) {
     .buble {
         top: -3px;
