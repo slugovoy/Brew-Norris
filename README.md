@@ -5,14 +5,18 @@ PROJECT TITLE - BrewNorris
 
 PROJECT DESCRIPTION:
 
+When the page loads there is a user guide.
+
+![userguide](https://user-images.githubusercontent.com/72281065/99831073-cbe7a780-2b1b-11eb-88f6-9053db849d53.JPG)
 When the page loads - I see input field.
 
+![groupproject](https://user-images.githubusercontent.com/72281065/99829921-2ed83f00-2b1a-11eb-9d52-074c18e212ec.JPG)
 
 When I search for a breweries by the city name - I see city name with breweries listed below.
-
+![searchbrew](https://user-images.githubusercontent.com/72281065/99831065-c722f380-2b1b-11eb-9215-2cf605dc859b.JPG)
 
 When I click search button - along with info I am getting a Chuck Norris' joke.
-
+![jokes](https://user-images.githubusercontent.com/72281065/99831082-cdb16b00-2b1b-11eb-8032-c209d6125f88.JPG)
 
 When I view the list - I see the following info: brewery name, brewery type, address,phone number and website.
 
@@ -21,7 +25,7 @@ When I click on brewery url - it opens in new window.
 
 
 If I want - I can add brewery to my favorits list.
-
+![brewfav](https://user-images.githubusercontent.com/72281065/99831071-ca1de400-2b1b-11eb-9506-4fd566884b5f.JPG)
 
 When I click on the brewery name in favorits - I presented with following info:brewery name, brewery type, address,phone number and website.
 
@@ -54,16 +58,9 @@ https://rapidapi.com/matchilling/api/chuck-norris/
 
 
 
-TASKS:
 
 
-1. Create HTML with following: navbar, search box with 2 buttons, favorits box below on a left side. Right side: on the top - Chuck Norris meme, below Chuck Norris memes - list of favorits. On the buttom - footer with copyrights.
 
-2. Using materializecss make the sceleton of html looks according to the scetch.
-
-3. Javascript: create variables, make 2 ajax calls to get data from both APIs, make a functions for bringing data on a page.
-
-![groupproject](https://user-images.githubusercontent.com/72281065/99829921-2ed83f00-2b1a-11eb-9d52-074c18e212ec.JPG)
 
 Project Requirements:
    ## *Technologies, languages, frameworks been used:*
