@@ -125,6 +125,7 @@ $(document).ready(function () {
   });
 
 });
+// Gave functionality to the User Guide button
 $(document).ready(function(){
   $('.tap-target').tapTarget();
 });
