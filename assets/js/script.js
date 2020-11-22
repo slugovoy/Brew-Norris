@@ -16,10 +16,10 @@ $(document).ready(function () {
     $(".favorites-container-header").text("");
     // creating titles for lists
     $(".results-container-header").append(
-      $("<h2>").attr("class", "h2ForHeader").text("List of Breweries")
+      $("<h3>").attr("class", "h2ForHeader").text("List of Breweries")
     );
     $(".favorites-container-header").append(
-      $("<h2>").attr("class", "h2ForHeader").text("Favorites")
+      $("<h3>").attr("class", "h2ForHeader").text("Favorites")
     );
     $("#search").val("");
     //brewery api function
@@ -80,9 +80,10 @@ $(document).ready(function () {
     };
     $.ajax(settings).done(function (response) {
       //appending joke to page
-      let joke = $("<p>").text(response.value);
+      let joke = $("<h5>").text(response.value);
       $(".card-content").append(joke);
     });
+
   });
   // creating function to add name to favorites list
   function saveBrewery(e) {
@@ -110,10 +111,12 @@ $(document).ready(function () {
 
     };
   }
+ 
   //ability for user to send a list of favorite breweries via email
   let sendList = $("#sendEmail")
   sendList.on("click", function (e) {
     e.preventDefault();
+    if (breweryHistory.length === 0) return;
     let text = breweryHistory;
     let textToRead = "";
     for (let i = 0; i < text.length; i++) {
@@ -123,6 +126,12 @@ $(document).ready(function () {
     let link = "mailto:?subject&body=" + textToRead;
     window.location.href = link;
   });
+
+  $("#clear-btn").on("click", function(e){
+    e.preventDefault();
+    localStorage.clear();
+    $(".favorites-container").empty();
+  })
 
 });
 // Gave functionality to the User Guide button

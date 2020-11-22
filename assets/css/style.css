@@ -1,3 +1,8 @@
+body {
+  background-image: url(https://breweryprintshoppe.com/wp-content/uploads/2017/12/brewery-print-shoppe-background-keg-beer.jpg);
+  background-color: rgb(114, 110, 110);
+  padding: 0 15px;
+}
 /* Centered the header, image, and container for the brewery and joke */
 .header,
 .figure,
@@ -5,12 +10,31 @@
 .joke-container {
   text-align: center;
 }
+/* #cardField{
+  opacity: 1;
+} */
+.btn{
+  border-radius: 8px;
+  background-color: rgb(24, 202, 202);
+  color: black;
+}
+
 /* changed the color of the joke container */
 .card-content {
-  background-color: slategray;
+  border-radius: 10px;
+  background-color: floralwhite;
+  width: fit-content;
+  margin: auto;
+}
+h5 {
+  font-size: 30px;
 }
 .menu {
   position: relative;
+  background-color: rgb(24, 202, 202);
+}
+.tap-target {
+  background-color: rgb(24, 202, 202);
 }
 /* Style for window */
 .buble {
@@ -25,30 +49,36 @@
 }
 /* Styling for buttons */
 button {
-  background-color: rgb(187, 187, 236);
+  background-color: rgb(24, 202, 202);
   color: white;
-  border-radius: 4px;
+  border-radius: 8px;
   padding: 0.5rem;
   cursor: pointer;
+  color: black;
 }
 /* changed the background color of the list of breweries */
-.brewery-container {
-  background-color: rgb(24, 202, 202);
-}
+
 /* Centered and colored the list of breweries and the list of favorites */
 .results-container,
 .favorites-container {
   display: block;
   justify-content: center;
-  background-color: rgb(24, 202, 202);
-  border: 2px solid black;
+  /* background-color: rgb(24, 202, 202); */
+  border-radius: 10px;
+  overflow: auto;
+  width: 50rem;
+  height: 50rem;
+  /* border: 5px solid rgb(114, 110, 110); */
 }
+
+
 /* added borders */
 .resultsDiv {
   margin-bottom: 40px;
   color: black;
-  background-color: rgb(160, 166, 172);
+  background-color: lightgray;
   text-align: center;
+  border-radius: 8px;
 }
 /* Centered the headers for both the results and favorites */
 .results-container-header,
@@ -59,7 +89,8 @@ button {
 .brewFave {
   padding: 1.2rem;
   margin-bottom: 1rem;
-  background-color: white;
+  background-color: lightgray;
+  border-radius: 8px;
 }
 /* added text decoration for headers */
 .h2ForHeader {
@@ -72,6 +103,10 @@ button {
 /* centered the footer */
 .footer {
   text-align: center;
+  color: black;
+  background-color: rgb(24, 202, 202);
+  padding: 10px;
+  border-radius: 8px;
 }
 /* added a media query for the bubble */
 @media screen and (max-width: 600px) {
