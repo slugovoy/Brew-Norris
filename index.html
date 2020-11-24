@@ -18,28 +18,28 @@
 <body>
 
   <div class="figure">
-    <img src="./assets/images/chuckapproves.jpg" alt="thumbs up chuck;" width="400" height="341" />
+    <img src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/62108b52-f2de-4805-9562-60c4910f81c7/dculocj-419b610e-c106-453f-8240-2a3ab5d5f7ff.png/v1/fill/w_1280,h_1280,strp/chuck_norris_seal_of_approval_by_jigaraphale_dculocj-fullview.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOiIsImlzcyI6InVybjphcHA6Iiwib2JqIjpbW3siaGVpZ2h0IjoiPD0xMjgwIiwicGF0aCI6IlwvZlwvNjIxMDhiNTItZjJkZS00ODA1LTk1NjItNjBjNDkxMGY4MWM3XC9kY3Vsb2NqLTQxOWI2MTBlLWMxMDYtNDUzZi04MjQwLTJhM2FiNWQ1ZjdmZi5wbmciLCJ3aWR0aCI6Ijw9MTI4MCJ9XV0sImF1ZCI6WyJ1cm46c2VydmljZTppbWFnZS5vcGVyYXRpb25zIl19._4uXboUW7yAwz2hmVMZ5p5ZRcGl_McKtAsbHxWZTXfQ" alt="thumbs up chuck;" width="400" height="341" />
   </div>
   <!-- Added a user guide button -->
-  <a class="waves-effect waves-light btn" onclick="$('.tap-target').tapTarget('open')">User Guide</a>
+  <a class="waves-effect btn" onclick="$('.tap-target').tapTarget('open')">User Guide</a>
   <!-- Set the menu window in the right corner -->
   <div class="fixed-action-btn direction-top active" style="bottom: 45px; right: 24px;">
-    <a id="menu" class="btn btn-floating btn-large cyan">
+    <a id="menu" class="btn btn-floating btn-large">
       <i class="material-icons">menu</i>
     </a>
   </div>
   <div class="tap-target-wrapper" style="right: -331px; bottom: -327px; position: fixed;">
-    <div class="tap-target cyan" data-target="menu">
-      <div class="tap-target-content white-text"
+    <div class="tap-target" data-target="menu">
+      <div class="tap-target-content black-text"
         style="width: 456px; height: 400px; top: 0px; right: 0px; bottom: 0px; left: 0px; padding: 56px; vertical-align: bottom;">
         <div class="buble">
           <!-- filled instructions inside the info window -->
           <h5>How to use our application:</h5>
-          <p class="white-text">1. Search for city</p>
-          <p class="white-text">2. Look at list of breweries returned for searched city</p>
-          <p class="white-text">3. Add breweries to favorite list, by clicking on listed brewery name</p>
-          <p class="white-text">4. Search for more breweries in other cities</p>
-          <p class="white-text">5. Email list of favorite breweries to yourself for later!</p>
+          <p class="black-text">1. Search for city</p>
+          <p class="black-text">2. Look at list of breweries returned for searched city</p>
+          <p class="black-text">3. Add breweries to favorite list, by clicking on listed brewery name</p>
+          <p class="black-text">4. Search for more breweries in other cities</p>
+          <p class="black-text">5. Email list of favorite breweries to yourself for later!</p>
         </div>
 
       </div>
@@ -51,39 +51,39 @@
   </div>
   <!-- header created -->
   <div class="box">
-    <header class="header">
+    <header class="header white-text">
       <h1>Welcome to Brew Norris!</h1>
     </header>
     <!-- holds jokes generated -->
     <div class="joke-container">
-      <div class="card blue-grey darken-1">
-        <div class="card-content white-text">
-        </div>
+      <!-- <div id="cardField" class="card"> -->
+        <div class="card-content black-text">
+        <!-- </div> -->
       </div>
     </div>
   </div>
   </div>
   </div>
   <!-- search for brewery  -->
-  <form class="search-container container">
+  <form class="search-container container white-text">
     <h2>Search for a brewery by city.</h2>
     <hr />
-    <div class="search-wrapper wrapper">
-      <p>Search City:</p>
+    <div class="search-wrapper wrapper white-text">
+      <h5>Search City:</h5>
       <input type="text" name="search" id="search" />
     </div>
     <!-- search button -->
     <div class="btn-wrapper">
       <button id="search-btn">Search</button>
-      <button id="clear-btn">Clear</button>
+      <button id="clear-btn">Clear Favorites</button>
       <button id="sendEmail">Send List</button>
     </div>
   </form>
   <!-- headers for search and favorites containers -->
   <div class="row header1">
-    <div class="results-container-header col s6">
+    <div class="results-container-header col s6 white-text">
     </div>
-    <div class="favorites-container-header col s6">
+    <div class="favorites-container-header col s6 white-text">
     </div>
   </div>
   <!-- results for brewery search and container for favorites -->
